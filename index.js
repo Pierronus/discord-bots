@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const cron = require('cron');
 const {Intents} = require("discord.js");
 
-const { staffid, logid, keeperid } = require('./config.json');
+const { staffid, logid, keeperid, token } = require('./config.json');
 dotenv.config();
 
 const fs = require('node:fs');
@@ -52,4 +52,4 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 });
-client.login("MTAwMzcxOTgyNTc0ODY2ODUxNg.Gtq4-_.E0uMg3vTpFlFfixiBwzLVqqrCCf8D9TyqEnOng")
+client.login(token)
